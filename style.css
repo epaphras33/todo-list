@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&family=Ubuntu:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #b8c6db;
+    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+    color: white;
+    min-height: 100vh;
+}
+
+
+form {
+    display: flex;
+    margin-top: 5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+
+form input,
+form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background-color: white;
+    box-shadow: 0 0 10px 5px rgba(100, 100, 100, 0.1);
+}
+
+form button {
+    color: #b4abee;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background-color: #b4abee;
+    color: white;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    background-color: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s ease;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.trash-button, 
+.complete-button {
+    background-color: #ff6f47;
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.complete-button {
+    background-color: rgb(104, 167, 104);
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash, 
+.fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px 5px rgba(100, 100, 100, 0.1);
+}
+
+select {
+    color: #b4abee;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+    
+}
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    background-color: #b4abee;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after {
+    background-color: white;
+    color: #b4abee;
+}
